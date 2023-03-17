@@ -2,12 +2,12 @@ let movieNameRef = document.getElementById("nome-filme");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
-//function to fetch data from api
+//function para ativar a API
 
 let getMovie = () => {
     let movieName = movieNameRef.value;
     let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
-    //if input field is empty
+    //Se o input estiver vazio
 
     if (movieName.length <= 0) {
         result.innerHTML = `<h3 class="msg">Digite o nome do Filme </h3>`;
