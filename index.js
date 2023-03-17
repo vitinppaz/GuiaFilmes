@@ -13,10 +13,10 @@ let getMovie = () => {
         result.innerHTML = `<h3 class="msg">Digite o nome do Filme </h3>`;
     }
 
-    //if input isn't empty
+    //Se o input não estiver vazio
     else {
         fetch(url).then((resp) => resp.json()).then((data) => {
-            //if movie exist in database
+            //Se o filme exister no database
             if (data.Response == "True") {
                 result.innerHTML = `
                     <div class="info">
@@ -44,14 +44,14 @@ let getMovie = () => {
                 `;
             }
 
-            //if movie doesn't exist in database
+            //Se o filme não existir no DATABASE
             else {
                 result.innerHTML = `<h3 class="msg">${data.Error}</h3>`;
             }
         })
-            //if error occurs
+            //Se algum erro acontecer
             .catch(() => {
-                result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+                result.innerHTML = `<h3 class="msg">Erro</h3>`;
             });
     }
 };

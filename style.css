@@ -56,6 +56,11 @@ body{
     cursor: pointer;
     border-radius: 0.7em;
 }
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    opacity: 0.8;
+  } 
 
 #result{
     color: #ffffff;
@@ -76,6 +81,7 @@ h2{
     font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 0.06em;
+    
 }
 
 .rating{
@@ -94,6 +100,7 @@ h2{
     display: inline-block;
     font-size: 1.1em;
     font-weight: 500;
+    color: #ffb92a;
 }
 
 .details{
@@ -101,7 +108,7 @@ h2{
     font-size: 0.95em;
     gap: 1em;
     justify-content: center;
-    color: #a0a0a0;
+    color: #ffb92a;
     margin: 0.6em 0;
     font-weight: 300;
 }
@@ -109,6 +116,7 @@ h2{
  .genre{
     display: flex;
     justify-content: space-around;
+    color: #ffb92a;
  }
 
  .genre div{
